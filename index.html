@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+
+    <link href="./styles/main.css" rel="stylesheet">
+    <link href="./styles/utilities.css" rel="stylesheet">
+    
+    <script src="./scripts/game.js" defer></script>
+</head>
+<body>
+    <div class="banner">
+        <h1>Etch-a-Sketch</h1>
+    </div>
+    <div class="game-wrapper">
+        <div class="options-bar">
+            <div class="option-section">
+                <div class="option-row">
+                    <div class="pen-color">
+                    </div>
+                    <span>Pen Color</span>
+                </div>
+                <div class="option-row">
+                    <div class="background-color">
+                    </div>
+                    <span>Background Color</span>
+                </div>
+            </div>
+
+            <div class="option-section">
+                <button class="option-button">Color Grabber</button>
+                <button class="option-button">Fill</button>
+            </div>
+
+            <div class="option-section">
+                <button class="option-button">Toggle Eraser</button>
+                <button class="option-button">Toggle Rainbow</button>
+                <button class="option-button">Toggle Lighten</button>
+            </div>
+            <div class="option-section">
+                <div class="slider-container">
+                    <input type="range" min="4" max="30" class="slider" id="gridSlider">
+                    <p id="grid-size-counter">Grid size:</p>
+                </div>
+                <button class="option-button" onclick="clearGridLines()">Toggle Grid Lines</button>
+            </div>
+            <button class="option-button" onclick="clearBoard()">Clear</button>
+
+            
+        </div>
+        <div class="game-container">
+            <div class="game-board">
+
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <h3>Etch-a-Sketch Project by Myles Chanin</h3>
+    </div>
+</body>
+</html>
