@@ -7,7 +7,6 @@
     <title>Etch-a-Sketch</title>
 
     <link href="./styles/main.css" rel="stylesheet">
-    <link href="./styles/utilities.css" rel="stylesheet">
     
     <script src="./scripts/game.js" defer></script>
 </head>
@@ -19,35 +18,37 @@
         <div class="options-bar">
             <div class="option-section">
                 <div class="option-row">
-                    <div class="pen-color">
-                    </div>
+                    <label class="pen-color">
+                        <input type="color" id="color-picker-pen">
+                    </label>
                     <span>Pen Color</span>
                 </div>
                 <div class="option-row">
-                    <div class="background-color">
-                    </div>
-                    <span>Background Color</span>
+                    <label class="background-color">
+                        <input type="color" id="color-picker-bg">
+                    </label>
+                    <span>Clear Color</span>
                 </div>
             </div>
 
             <div class="option-section">
-                <button class="option-button">Color Grabber</button>
-                <button class="option-button">Fill</button>
+                <button class="option-button board-coloring" onclick="iceToggle()">Toggle Ice</button>
+                <button class="option-button board-coloring" onclick="fireToggle()">Toggle Fire</button>
             </div>
 
             <div class="option-section">
-                <button class="option-button">Toggle Eraser</button>
-                <button class="option-button">Toggle Rainbow</button>
-                <button class="option-button">Toggle Lighten</button>
+                <button class="option-button board-coloring" onclick="eraserToggle()">Toggle Eraser</button>
+                <button class="option-button board-coloring" onclick="randomToggle()">Toggle Rainbow</button>
+                <button class="option-button" onclick="eyeDrop()">Eye Dropper</button>
             </div>
             <div class="option-section">
                 <div class="slider-container">
-                    <input type="range" min="4" max="30" class="slider" id="gridSlider">
+                    <input type="range" min="4" max="40" class="slider" id="gridSlider">
                     <p id="grid-size-counter">Grid size:</p>
                 </div>
                 <button class="option-button" onclick="clearGridLines()">Toggle Grid Lines</button>
             </div>
-            <button class="option-button" onclick="clearBoard()">Clear</button>
+            <button class="option-button clear" onclick="clearBoard()">Clear</button>
 
             
         </div>

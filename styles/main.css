@@ -54,6 +54,14 @@ p {
     border: 1px solid var(--lightBlue);
 }
 
+.pen-color {
+    background-color: black;
+}
+
+#color-picker-bg, #color-picker-pen {
+    visibility: hidden;     
+}
+
 .options-bar, .game-container{
     background-color: var(--darkGray); 
     display: flex;
@@ -61,8 +69,8 @@ p {
 }
 
 .options-bar {
-    min-width: 150px;
-    width: 17%;
+    min-width: 125px;
+    width: 14%;
     flex-direction: column;
     gap: 1.5%;
 }
@@ -70,12 +78,16 @@ p {
 .option-button {
     border: 2px solid var(--lightBlue);
     color: var(--lightBlue);
-    background-color: var(--darkGray);
+    background-color: rgb(19, 18, 18);
     display: block;
     width: 100%;
 
     padding-block: 7px;
     margin-bottom: 8px;
+}
+
+.active {
+    background-color: rgb(23, 5, 26);
 }
 
 .option-button:hover {
@@ -95,8 +107,8 @@ p {
 /* Game section */
 .game-container {
     box-sizing: border-box;
-    min-width: 300px;
-    min-height: 300px;
+    min-width: 500px;
+    min-height: 500px;
     width: 30vw;
     height: 30vw;
 
@@ -116,22 +128,10 @@ p {
     flex: 1;
 }
 
-.gridSquare, .gridSquareBorderless {
+.gridSquare{
     box-sizing: border-box;
     border: 1px solid black;
     display: flex;
-    flex: 1;    
+    flex: 1;
+    border-radius: 10%;    
 }
-
-.gridSquareBorderless {
-    border: none;
-}
-
-.gridSquare {
-    border: 1px solid black;
-}
-
-.gridSquare:hover {
-    background-color: blue;
-}
-
